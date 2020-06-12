@@ -4,9 +4,9 @@
       <h2><%= pluralize(author.errors.count, "error") %> prohibited this author from being saved:</h2>
 
       <ul>
-      <% author.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% author.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
@@ -21,15 +21,14 @@
     <%= form.text_field :email %>
   </div>
 
-<div class="field">
-  <%= f.label :password %><br />
-  <%= f.password_field :password %>
-</div>
-
-<div class="field">
-  <%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %>
-</div>
+  <div class="field">
+    <%= form.label :password %><br/>
+    <%= form.password_field :password %>
+  </div>
+  <div class="field">
+    <%= form.label :password_confirmation %><br/>
+    <%= form.password_field :password_confirmation %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
